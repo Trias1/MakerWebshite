@@ -1,0 +1,81 @@
+[ {
+  "urlPattern" : "/pages/Customers/**",
+  "permission" : "Role",
+  "roles" : [ "admin" ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/pages/DashboardMainSales/**",
+  "permission" : "Role",
+  "roles" : [ "admin" ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/pages/header/**",
+  "permission" : "Role",
+  "roles" : [ "user" ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/pages/leftnav/**",
+  "permission" : "Role",
+  "roles" : [ "admin" ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/pages/ListPageUser/**",
+  "permission" : "Role",
+  "roles" : [ "user" ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/pages/Login/**",
+  "permission" : "PermitAll",
+  "roles" : [ ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/pages/Main/**",
+  "permission" : "Role",
+  "roles" : [ "admin" ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/pages/Map/**",
+  "permission" : "Role",
+  "roles" : [ "admin" ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/pages/newlivesales/**",
+  "permission" : "Role",
+  "roles" : [ "admin" ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/pages/PageUser/**",
+  "permission" : "Role",
+  "roles" : [ "user" ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/pages/sales/**",
+  "permission" : "Role",
+  "roles" : [ "admin" ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/pages/soapImage/**",
+  "permission" : "Role",
+  "roles" : [ "admin" ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/pages/topnav/**",
+  "permission" : "Role",
+  "roles" : [ "user" ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/pages/VacationDetails/**",
+  "permission" : "Role",
+  "roles" : [ "admin" ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/**",
+  "permission" : "Authenticated",
+  "roles" : null,
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/services/github/user/**",
+  "permission" : "Role",
+  "roles" : [ "admin" ],
+  "httpMethod" : null
+} ]

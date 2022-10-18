@@ -1,0 +1,28 @@
+<wm-page pagetitle="Soap Image" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="10" name="page_content1">
+            <wm-layoutgrid name="layoutgrid1">
+                <wm-gridrow name="gridrow1">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn1">
+                        <wm-composite name="composite2">
+                            <wm-label class="col-md-3 control-label" name="label2" caption="Select Country"></wm-label>
+                            <wm-container class="col-md-9" name="container2">
+                                <wm-select name="select2" datavalue="AUS, ID, SMG, USA" dataset="AUS, ID, SMG, USA"></wm-select>
+                            </wm-container>
+                        </wm-composite>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn2"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow2">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn3">
+                        <wm-picture resizemode="cover" name="picture1" picturesource="bind:Variables.Flagnew.dataSet.countryFlagResult"></wm-picture>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn4"></wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+</wm-page>

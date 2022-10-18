@@ -1,0 +1,25 @@
+<wm-partial name="leftnav" type="leftnav">
+    <wm-nav name="leftnavigation" type="pills" layout="stacked">
+        <wm-nav-item name="list_dashboard">
+            <wm-anchor caption="Dashboard" name="dashboardLink" iconclass="fa fa-dashboard" on-click="Actions.goToPage_Main.invoke()" accessroles="admin"></wm-anchor>
+        </wm-nav-item>
+        <wm-nav-item name="list_support" accessroles="user">
+            <wm-anchor caption="Sales" name="supportLink" iconclass="fa fa-bar-chart-o" on-click="Actions.goToPage_sales.invoke()" accessroles="admin"></wm-anchor>
+        </wm-nav-item>
+        <wm-nav-item name="nav_item14">
+            <wm-anchor name="anchor15" iconclass="fa fa-automobile" caption="Vacation" on-click="Actions.goToPage_VacationForm.invoke()" accessroles="admin"></wm-anchor>
+        </wm-nav-item>
+        <wm-nav-item name="nav_item6">
+            <wm-anchor name="anchor6" iconclass="fa fa-user" caption="Customers" on-click="Actions.goToPage_Customers.invoke()" accessroles="admin"></wm-anchor>
+        </wm-nav-item>
+        <wm-nav-item name="nav_item6_1">
+            <wm-anchor name="anchor6_1" iconclass="fa fa-cubes" caption="Product" on-click="Actions.goToPage_ProductList.invoke()" accessroles="admin"></wm-anchor>
+        </wm-nav-item>
+        <wm-nav-item name="nav_item7">
+            <wm-anchor name="anchor7" iconclass="wi wi-picture" caption="Image" on-click="Actions.goToPage_soapImage.invoke()" accessroles="admin"></wm-anchor>
+        </wm-nav-item>
+        <wm-nav-item name="nav_item8">
+            <wm-anchor name="anchor8" iconclass="wi wi-backward" caption="Logout" on-click="Actions.logoutAction.invoke()" accessroles="admin"></wm-anchor>
+        </wm-nav-item>
+    </wm-nav>
+</wm-partial>

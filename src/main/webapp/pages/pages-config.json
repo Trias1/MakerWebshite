@@ -1,0 +1,90 @@
+[ {
+  "name" : "Common",
+  "type" : "PARTIAL",
+  "params" : [ ]
+}, {
+  "name" : "Customers",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "DashboardMainSales",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "DashboardMainUserPage",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "ListPageUser",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "Login",
+  "type" : "PAGE",
+  "params" : [ {
+    "name" : "id",
+    "type" : "integer"
+  } ]
+}, {
+  "name" : "Main",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "Map",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "PageUser",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "ProductList",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "VacationDetails",
+  "type" : "PAGE",
+  "params" : [ {
+    "name" : "id",
+    "type" : "integer"
+  } ]
+}, {
+  "name" : "VacationForm",
+  "type" : "PAGE",
+  "params" : [ {
+    "name" : "id",
+    "type" : "integer"
+  } ]
+}, {
+  "name" : "footer",
+  "type" : "FOOTER",
+  "params" : [ ]
+}, {
+  "name" : "header",
+  "type" : "HEADER",
+  "params" : [ ]
+}, {
+  "name" : "leftnav",
+  "type" : "LEFTNAV",
+  "params" : [ ]
+}, {
+  "name" : "newlivesales",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "rightnav",
+  "type" : "RIGHTNAV",
+  "params" : [ ]
+}, {
+  "name" : "sales",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "soapImage",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "topnav",
+  "type" : "TOPNAV",
+  "params" : [ ]
+} ]

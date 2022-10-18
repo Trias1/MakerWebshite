@@ -1,0 +1,20 @@
+<wm-partial name="header" type="header">
+    <wm-navbar title="Ayam Geprek" name="navbar2" imgsrc="resources/images/logos/aym.jpg" accessroles="user">
+        <wm-nav type="navbar" class="navbar-left" name="nav2">
+            <wm-nav-item name="nav_item3">
+                <wm-anchor caption="Home" name="anchor2" iconclass="fa fa-home" on-click="Actions.goToPage_PageUser.invoke()" accessroles="user"></wm-anchor>
+            </wm-nav-item>
+            <wm-nav-item name="nav_item4">
+                <wm-anchor name="anchor4" iconclass="fa fa-bars" caption="List Sales" on-click="Actions.goToPage_ListPageUser.invoke()" accessroles="user"></wm-anchor>
+            </wm-nav-item>
+            <wm-nav-item name="nav_item4_1"></wm-nav-item>
+            <wm-nav-item name="nav_item5"></wm-nav-item>
+        </wm-nav>
+        <wm-nav type="navbar" class="navbar-right" name="nav3">
+            <wm-nav-item name="nav_item8">
+                <wm-anchor caption="Logout" name="anchor7" on-click="Actions.logoutAction.invoke()" accessroles="user"></wm-anchor>
+            </wm-nav-item>
+            <wm-nav-item name="nav_item6"></wm-nav-item>
+        </wm-nav>
+    </wm-navbar>
+</wm-partial>

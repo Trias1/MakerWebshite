@@ -1,0 +1,17 @@
+<wm-page pagetitle="Vacation Details" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="10" name="page_content1">
+            <wm-breadcrumb dataset="Customers, Vacation Details" class="path-based" name="breadcrumb1" on-beforenavigate="Actions.goToPage_Customers.invoke()"></wm-breadcrumb>
+            <wm-table statehandler="URL" name="VacationTable2" title="bind:'Vacation Details for Employee Id:' + Variables.HrdbVacationData1.dataSet[$i].employee.firstname" dataset="bind:Variables.HrdbVacationData1.dataSet" navigation="Basic">
+                <wm-table-column binding="startDate" caption="Start Date" generator="assigned" pcdisplay="true" mobiledisplay="true" tabletdisplay="true" type="date"></wm-table-column>
+                <wm-table-column binding="endDate" caption="End Date" generator="assigned" pcdisplay="true" mobiledisplay="true" tabletdisplay="true" type="date"></wm-table-column>
+                <wm-table-column binding="status" caption="Status" generator="assigned" pcdisplay="true" mobiledisplay="true" tabletdisplay="true" type="string"></wm-table-column>
+                <wm-table-column binding="type" caption="Type" generator="assigned" pcdisplay="true" mobiledisplay="true" tabletdisplay="true" type="string"></wm-table-column>
+                <wm-table-column binding="employee.firstname" caption="Employee Firstname" generator="assigned" pcdisplay="true" mobiledisplay="true" tabletdisplay="true" type="string" related-entity-name="Employee" readonly="true"></wm-table-column>
+            </wm-table>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+</wm-page>

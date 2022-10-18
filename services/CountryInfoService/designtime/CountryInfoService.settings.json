@@ -1,0 +1,15 @@
+{
+  "httpBasicAuthUsername" : "",
+  "httpBasicAuthPassword" : "",
+  "endpointAddress" : "http://www.oorsprong.org/websamples.countryinfo/CountryInfoService.wso",
+  "connectionTimeout" : 10000,
+  "requestTimeout" : 10000,
+  "soapActionURI" : null,
+  "packageName" : "com.tugas_trias.services.countryinfoservice",
+  "wsdlLocation" : "http://www.oorsprong.org/websamples.countryinfo/CountryInfoService.wso?WSDL",
+  "wsdlSource" : "URL",
+  "bindingsFile" : null,
+  "wsdlFile" : "CountryInfoService.wsdl",
+  "httpHeaders" : { },
+  "requestContextProperties" : null
+}

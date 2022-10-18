@@ -1,0 +1,54 @@
+<wm-page pagetitle="Newlivesales" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="10" name="page_content1">
+            <wm-breadcrumb dataset="Home, LiveSales" class="path-based" name="breadcrumb1" on-beforenavigate="Actions.goToPage_Main.invoke()"></wm-breadcrumb>
+            <wm-livetable name="SalesLiveTable1">
+                <wm-table gridfirstrowselect="true" editmode="form" statehandler="URL" name="SalesTable1" title="Sales List" dataset="bind:Variables.SalesdbSalesData.dataSet" navigation="Basic">
+                    <wm-table-column binding="id" caption="Id" primary-key="true" edit-widget-type="number" type="integer" generator="identity" readonly="true" tabletdisplay="false" show="true"></wm-table-column>
+                    <wm-table-column binding="entryDate" caption="Entry Date" edit-widget-type="date" type="date" generator="assigned" tabletdisplay="false" show="true" readonly="false"></wm-table-column>
+                    <wm-table-column binding="sales" caption="Sales" edit-widget-type="number" type="integer" generator="assigned" tabletdisplay="false" show="true" readonly="false"></wm-table-column>
+                    <wm-table-column binding="products.name" caption="Products Name" edit-widget-type="text" related-entity-name="Products" type="string" generator="assigned" readonly="true" tabletdisplay="false" show="true"></wm-table-column>
+                    <wm-table-column binding="rowOperations" caption="Actions" width="120px" type="custom" readonly="true" sortable="false" searchable="false" show="true"></wm-table-column>
+                    <wm-table-action key="addNewRow" display-name="New" show="true" class="btn-primary" iconclass="wi wi-plus" title="New" action="addNewRow()" shortcutkey="" disabled="false" widget-type="button"></wm-table-action>
+                    <wm-table-row-action key="updaterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-pencil" title="Edit" action="editRow($event)" disabled="false" widget-type="button"></wm-table-row-action>
+                    <wm-table-row-action key="deleterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-trash" title="Delete" action="deleteRow($event)" disabled="false" widget-type="button"></wm-table-row-action>
+                </wm-table>
+                <wm-liveform errormessage="" title="Sales Info" formlayout="inline" iconclass="wi wi-edit" name="SalesLiveForm1" dataset="bind:Variables.SalesdbSalesData.dataSet" captionalign="left" captionposition="top" validationtype="html">
+                    <wm-layoutgrid columns="3" name="layoutgrid1">
+                        <wm-gridrow name="gridrow1">
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn1">
+                                <wm-form-field name="entryDate" displayname="Entry Date" show="true" primary-key="false" generator="assigned" key="entryDate" type="date" readonly="false" required="true" widget="date" datepattern="MMM d, y" placeholder="Select date"
+                                    outputformat="yyyy-MM-dd" maxdate="CURRENT_DATE"></wm-form-field>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn2">
+                                <wm-form-field name="sales" displayname="Sales" show="true" primary-key="false" generator="assigned" key="sales" type="integer" readonly="false" required="false" step="0" widget="number" inputtype="number" placeholder="Enter value"
+                                    validationmessage="Minimum sales $500" minvalue="500"></wm-form-field>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn3">
+                                <wm-form-field name="isRenewal" displayname="Is Renewal" show="true" primary-key="false" generator="assigned" key="isRenewal" type="boolean" readonly="false" required="false" widget="checkbox" placeholder="" defaultvalue="false"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow2">
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn4">
+                                <wm-form-field name="products" displayname="Products" show="true" primary-key="false" generator="assigned" key="products" type="list" is-related="true" readonly="false" required="true" widget="select" matchmode="startignorecase"
+                                    placeholder="Select value" filterexpressions="{&quot;condition&quot;:&quot;AND&quot;,&quot;rules&quot;:[{&quot;target&quot;:&quot;&quot;,&quot;type&quot;:&quot;string&quot;,&quot;matchMode&quot;:&quot;anywhereignorecase&quot;,&quot;value&quot;:&quot;&quot;,&quot;required&quot;:false}]}"
+                                    displayexpression="name"></wm-form-field>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn5">
+                                <wm-form-field name="quotes" displayname="Quotes" show="true" primary-key="false" generator="assigned" key="quotes" type="list" is-related="true" readonly="false" required="true" widget="select" matchmode="startignorecase"
+                                    placeholder="Select value" filterexpressions="{&quot;condition&quot;:&quot;AND&quot;,&quot;rules&quot;:[{&quot;target&quot;:&quot;&quot;,&quot;type&quot;:&quot;string&quot;,&quot;matchMode&quot;:&quot;anywhereignorecase&quot;,&quot;value&quot;:&quot;&quot;,&quot;required&quot;:false}]}"
+                                    displayexpression="reps.name"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                    </wm-layoutgrid>
+                    <wm-form-field name="id" displayname="Id" show="false" primary-key="true" generator="identity" key="id" type="integer" readonly="true" required="true" step="0" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field>
+                    <wm-form-action key="cancel" display-name="Cancel" show="true" class="form-cancel btn-default" iconclass="wi wi-cancel" title="Cancel" action="cancel()" disabled="false" widget-type="button" type="button" update-mode="true"></wm-form-action>
+                    <wm-form-action key="save" display-name="Save" show="true" class="form-save btn-success" iconclass="wi wi-save" title="Save" disabled="false" widget-type="button" type="submit" update-mode="true"></wm-form-action>
+                </wm-liveform>
+            </wm-livetable>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+</wm-page>

@@ -1,0 +1,34 @@
+[ {
+  "providerId" : "google",
+  "authorizationUrl" : "${oauth2.google.authorizationUrl}",
+  "accessTokenUrl" : "${oauth2.google.accessTokenUrl}",
+  "clientId" : "${oauth2.google.clientId}",
+  "clientSecret" : "${oauth2.google.clientSecret}",
+  "sendAccessTokenAs" : null,
+  "accessTokenParamName" : null,
+  "oAuth2Pkce" : null,
+  "scopes" : [ {
+    "name" : "Calendar",
+    "value" : "https://www.googleapis.com/auth/calendar https://www.googleapis.com/auth/calendar.readonly"
+  }, {
+    "name" : "Google Drive",
+    "value" : "https://www.googleapis.com/auth/drive.readonly https://www.googleapis.com/auth/drive.file https://www.googleapis.com/auth/drive.photos.readonly"
+  } ],
+  "oauth2Flow" : "AUTHORIZATION_CODE",
+  "responseType" : null
+}, {
+  "providerId" : "github",
+  "authorizationUrl" : "${oauth2.github.authorizationUrl}",
+  "accessTokenUrl" : "${oauth2.github.accessTokenUrl}",
+  "clientId" : "${oauth2.github.clientId}",
+  "clientSecret" : "${oauth2.github.clientSecret}",
+  "sendAccessTokenAs" : null,
+  "accessTokenParamName" : null,
+  "oAuth2Pkce" : null,
+  "scopes" : [ {
+    "name" : "User Email",
+    "value" : "user:email"
+  } ],
+  "oauth2Flow" : "AUTHORIZATION_CODE",
+  "responseType" : null
+} ]

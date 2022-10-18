@@ -1,0 +1,7 @@
+{
+  "id" : "FileService",
+  "type" : "JavaService",
+  "packageNames" : [ "com.tugas_trias.fileservice" ],
+  "serviceClassNames" : [ "com.tugas_trias.fileservice.FileService" ],
+  "title" : "FileService"
+}

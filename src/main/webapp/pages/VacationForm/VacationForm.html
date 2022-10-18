@@ -1,0 +1,18 @@
+<wm-page pagetitle="Vacation Form" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="10" name="page_content1">
+            <wm-table statehandler="URL" name="VacationTable1" title="Vacation List" dataset="bind:Variables.HrdbVacationData.dataSet" navigation="Basic">
+                <wm-table-column binding="status" caption="Status" generator="assigned" pcdisplay="true" mobiledisplay="true" tabletdisplay="true" type="string"></wm-table-column>
+                <wm-table-column binding="type" caption="Type" generator="assigned" pcdisplay="true" mobiledisplay="true" tabletdisplay="true" type="string"></wm-table-column>
+                <wm-table-column binding="employee.firstname" caption="Employee Firstname" generator="assigned" pcdisplay="true" mobiledisplay="true" tabletdisplay="true" type="string" related-entity-name="Employee" readonly="true"></wm-table-column>
+                <wm-table-column binding="employee.lastname" caption="Employee Lastname" generator="assigned" pcdisplay="true" mobiledisplay="true" tabletdisplay="true" type="string" related-entity-name="Employee" readonly="true"></wm-table-column>
+                <wm-table-column binding="employee.city" caption="Employee City" generator="assigned" pcdisplay="true" mobiledisplay="true" tabletdisplay="true" type="string" related-entity-name="Employee" readonly="true"></wm-table-column>
+                <wm-table-column binding="employee.birthdate" caption="Employee Birthdate" generator="assigned" pcdisplay="true" mobiledisplay="true" tabletdisplay="true" type="date" related-entity-name="Employee" readonly="true"></wm-table-column>
+                <wm-table-column binding="employee.jobTitle" caption="Job Title" generator="assigned" pcdisplay="true" mobiledisplay="true" tabletdisplay="true" type="string" related-entity-name="Employee" readonly="true"></wm-table-column>
+            </wm-table>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+</wm-page>

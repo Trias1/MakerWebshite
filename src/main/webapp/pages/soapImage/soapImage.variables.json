@@ -1,0 +1,54 @@
+{
+  "flag" : {
+    "_id" : "wm-flag-wm.ServiceVariable-1665548867463",
+    "name" : "flag",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "SCountryISOCode",
+      "value" : "bind:Widgets.select2.datavalue",
+      "type" : "string"
+    } ],
+    "type" : "com.tugas_trias.services.countryinfoservice.CountryFlagResponse",
+    "service" : "CountryInfoService",
+    "operation" : "countryFlag",
+    "operationId" : "CountryInfoServiceController_countryFlag",
+    "operationType" : "get",
+    "serviceType" : "SoapService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "CountryInfoService"
+  },
+  "Flagnew" : {
+    "_id" : "wm-Flagnew-wm.ServiceVariable-1665549682884",
+    "name" : "Flagnew",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "SCountryISOCode",
+      "value" : "bind:Widgets.select2.datavalue",
+      "type" : "string"
+    } ],
+    "type" : "com.tugas_trias.services.countryinfoservice.CountryFlagResponse",
+    "service" : "CountryInfoService",
+    "operation" : "countryFlag",
+    "operationId" : "CountryInfoServiceController_countryFlag",
+    "operationType" : "get",
+    "serviceType" : "SoapService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "CountryInfoService"
+  }
+}

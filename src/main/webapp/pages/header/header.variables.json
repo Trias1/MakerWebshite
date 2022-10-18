@@ -1,0 +1,24 @@
+{
+  "serviceVariable2" : {
+    "_id" : "wm-serviceVariable2-wm.ServiceVariable-1665591325953",
+    "name" : "serviceVariable2",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "com.wavemaker.runtime.security.WMCurrentUser",
+    "service" : "securityService",
+    "operation" : "getLoggedInUser",
+    "operationId" : "SecurityController_getLoggedInUser",
+    "operationType" : "get",
+    "serviceType" : "SecurityServiceType",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "Security"
+  }
+}

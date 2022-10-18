@@ -1,0 +1,96 @@
+{
+  "displayName" : "GoogleOAuth",
+  "group" : "OAuth",
+  "iconUrl" : "/resources/images/imagelists/Google.png",
+  "resources" : {
+    "styles" : [ "/pages/Main/Main.css" ],
+    "scripts" : [ ]
+  },
+  "properties" : {
+    "accesstoken" : {
+      "type" : "string",
+      "description" : "Access Token",
+      "bindable" : "out-bound",
+      "value" : "bind:Variables.OAuthHandlerServiceGetAccessToken.dataSet.value",
+      "show" : false,
+      "disabled" : false
+    },
+    "loginmode" : {
+      "type" : "list",
+      "displayName" : "Login Mode",
+      "description" : "Login Mode",
+      "bindable" : "",
+      "value" : "manual",
+      "widget" : "list",
+      "options" : [ "auto", "manual" ],
+      "show" : true,
+      "disabled" : false
+    },
+    "buttoncaption" : {
+      "type" : "string",
+      "displayName" : "Button Caption",
+      "description" : "This property sets the caption onto the google login button.",
+      "bindable" : "in-bound",
+      "value" : "Login with Google",
+      "widget" : "string",
+      "show" : true,
+      "disabled" : false
+    },
+    "buttonclass" : {
+      "type" : "string",
+      "displayName" : "Button Class",
+      "description" : "This property sets the custom class onto the google login button",
+      "bindable" : "in-bound",
+      "value" : "",
+      "widget" : "string",
+      "show" : true,
+      "disabled" : false
+    },
+    "callbackurl" : {
+      "type" : "string",
+      "displayName" : "Callback URL",
+      "description" : "Callback URL",
+      "bindable" : "out-bound",
+      "value" : "bind:Variables.OAuthHandlerServiceGetCallbackURL.dataSet.value",
+      "show" : false,
+      "disabled" : false
+    },
+    "authorizationheader" : {
+      "type" : "string",
+      "displayName" : "Requires Header",
+      "description" : "Auth Header",
+      "bindable" : "out-bound",
+      "value" : "bind:'Bearer '+ accesstoken",
+      "show" : false,
+      "disabled" : false
+    },
+    "loginsuccessmessage" : {
+      "type" : "string",
+      "displayName" : "Success Message",
+      "description" : "This property will set the text for the toaster after successful authorization",
+      "bindable" : "in-bound",
+      "value" : "",
+      "widget" : "string",
+      "show" : true,
+      "disabled" : false
+    }
+  },
+  "events" : {
+    "onAccesstokenfetch" : {
+      "description" : "Callback action on successful fetch of accesstoken",
+      "eventData" : ""
+    },
+    "onLoginurlfetch" : {
+      "description" : "Callback action after login url being fetched",
+      "eventData" : ""
+    }
+  },
+  "methods" : {
+    "login" : {
+      "description" : "login description",
+      "parameters" : [ ],
+      "returnType" : "any",
+      "example" : ""
+    }
+  }
+}

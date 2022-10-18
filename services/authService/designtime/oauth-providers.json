@@ -1,0 +1,34 @@
+[ {
+  "providerId" : "google",
+  "authorizationUrl" : "https://accounts.google.com/o/oauth2/auth",
+  "accessTokenUrl" : "https://www.googleapis.com/oauth2/v3/token",
+  "clientId" : "214926769938-srml0p70g5lnr61t79ccbge3der393j5.apps.googleusercontent.com",
+  "clientSecret" : "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",
+  "sendAccessTokenAs" : "HEADER",
+  "accessTokenParamName" : "Bearer",
+  "oAuth2Pkce" : null,
+  "scopes" : [ {
+    "name" : "Calendar",
+    "value" : "https://www.googleapis.com/auth/calendar https://www.googleapis.com/auth/calendar.readonly"
+  }, {
+    "name" : "Google Drive",
+    "value" : "https://www.googleapis.com/auth/drive.readonly https://www.googleapis.com/auth/drive.file https://www.googleapis.com/auth/drive.photos.readonly"
+  } ],
+  "oauth2Flow" : "AUTHORIZATION_CODE",
+  "responseType" : null
+}, {
+  "providerId" : "github",
+  "authorizationUrl" : "https://github.com/login/oauth/authorize",
+  "accessTokenUrl" : "https://github.com/login/oauth/access_token",
+  "clientId" : "1b5e28dbe7c69e7228de",
+  "clientSecret" : "42c3ddd7abf9b654278d2ae36bf2adcfbb0c3605",
+  "sendAccessTokenAs" : "HEADER",
+  "accessTokenParamName" : "Bearer",
+  "oAuth2Pkce" : null,
+  "scopes" : [ {
+    "name" : "User Email",
+    "value" : "user:email"
+  } ],
+  "oauth2Flow" : "AUTHORIZATION_CODE",
+  "responseType" : null
+} ]

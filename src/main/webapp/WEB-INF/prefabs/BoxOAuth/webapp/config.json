@@ -1,0 +1,87 @@
+{
+  "displayName" : "BoxOAuth",
+  "group" : "OAuth",
+  "iconUrl" : "/resources/images/imagelists/552c176aa76182506a85e42f_app_box_256x256.png",
+  "resources" : {
+    "styles" : [ "/pages/Main/Main.css" ],
+    "scripts" : [ ]
+  },
+  "properties" : {
+    "accesstoken" : {
+      "type" : "string",
+      "description" : "Access Token",
+      "bindable" : "out-bound",
+      "value" : "bind:Variables.OauthcallbackGetAccessToken.dataSet.value",
+      "show" : false,
+      "disabled" : false
+    },
+    "loginmode" : {
+      "type" : "list",
+      "displayName" : "Login Mode",
+      "description" : "This property invokes the oAuth authorization on page load if set to auto.",
+      "bindable" : "",
+      "value" : "manual",
+      "widget" : "list",
+      "options" : [ "auto", "manual" ],
+      "show" : true,
+      "disabled" : false
+    },
+    "buttoncaption" : {
+      "type" : "string",
+      "displayName" : "Button Caption",
+      "description" : "This property sets the caption onto the box login button.",
+      "bindable" : "in-bound",
+      "value" : "Login with Box",
+      "widget" : "string",
+      "show" : true,
+      "disabled" : false
+    },
+    "buttonclass" : {
+      "type" : "string",
+      "displayName" : "Button Class",
+      "description" : "This property sets the custom class onto the box login button",
+      "bindable" : "in-bound",
+      "value" : "",
+      "widget" : "string",
+      "show" : true,
+      "disabled" : false
+    },
+    "callbackurl" : {
+      "type" : "string",
+      "displayName" : "Callback URL",
+      "description" : "Callback URL",
+      "bindable" : "out-bound",
+      "value" : "bind:Variables.OauthcallbackGetCallbackURL.dataSet.value",
+      "show" : false,
+      "disabled" : false
+    },
+    "loginsuccessmessage" : {
+      "type" : "string",
+      "displayName" : "Success Message",
+      "description" : "This property will set the text for the toaster after successful authorization",
+      "bindable" : "in-bound",
+      "value" : "Login Successful!",
+      "widget" : "string",
+      "show" : true,
+      "disabled" : false
+    }
+  },
+  "events" : {
+    "onAccesstokenfetch" : {
+      "description" : "Callback action on successful fetch of accesstoken",
+      "eventData" : ""
+    },
+    "onLoginurlfetch" : {
+      "description" : "Callback action after login url being fetched",
+      "eventData" : ""
+    }
+  },
+  "methods" : {
+    "login" : {
+      "description" : "login description",
+      "parameters" : [ ],
+      "returnType" : "any",
+      "example" : ""
+    }
+  }
+}

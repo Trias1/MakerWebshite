@@ -1,0 +1,165 @@
+{
+  "basePath" : "${rest.github.basepath}",
+  "paths" : {
+    "/user" : {
+      "x-WM-BASE_PATH" : "/user",
+      "x-WM-TAG" : "github",
+      "x-WM-RELATIVE_PATH" : "",
+      "get" : {
+        "x-WM-METHOD_NAME" : "invoke",
+        "security" : [ {
+          "oauth2" : [ ]
+        } ],
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "produces" : [ "application/json" ],
+        "operationId" : "github_invoke",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            },
+            "description" : "Success"
+          }
+        },
+        "tags" : [ "github" ],
+        "consumes" : [ "application/json" ]
+      },
+      "x-WM-COMPLETE_PATH" : "${rest.github.scheme}://${rest.github.host}${rest.github.basepath}/user"
+    }
+  },
+  "host" : "${rest.github.host}",
+  "schemes" : [ "${rest.github.scheme}" ],
+  "securityDefinitions" : {
+    "oauth2" : {
+      "accessTokenParamName" : "Bearer",
+      "tokenUrl" : "https://github.com/login/oauth/access_token",
+      "authorizationUrl" : "https://github.com/login/oauth/authorize",
+      "sendAccessTokenAs" : "HEADER",
+      "type" : "oauth2",
+      "x-WM-PROVIDER_ID" : "github"
+    }
+  },
+  "definitions" : {
+    "RootResponse" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "github.RootResponse",
+      "x-WM-TAGS" : [ "github" ],
+      "required" : [ "avatar_url", "bio", "blog", "company", "created_at", "email", "events_url", "followers", "followers_url", "following", "following_url", "gists_url", "gravatar_id", "hireable", "html_url", "id", "location", "login", "name", "node_id", "organizations_url", "public_gists", "public_repos", "received_events_url", "repos_url", "site_admin", "starred_url", "subscriptions_url", "twitter_username", "type", "updated_at", "url" ],
+      "properties" : {
+        "gists_url" : {
+          "type" : "string"
+        },
+        "repos_url" : {
+          "type" : "string"
+        },
+        "following_url" : {
+          "type" : "string"
+        },
+        "twitter_username" : {
+          "type" : "string"
+        },
+        "bio" : {
+          "type" : "string"
+        },
+        "created_at" : {
+          "type" : "string"
+        },
+        "login" : {
+          "type" : "string"
+        },
+        "type" : {
+          "type" : "string"
+        },
+        "blog" : {
+          "type" : "string"
+        },
+        "subscriptions_url" : {
+          "type" : "string"
+        },
+        "updated_at" : {
+          "type" : "string"
+        },
+        "site_admin" : {
+          "type" : "boolean"
+        },
+        "company" : {
+          "type" : "string"
+        },
+        "id" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "public_repos" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "gravatar_id" : {
+          "type" : "string"
+        },
+        "email" : {
+          "type" : "string"
+        },
+        "organizations_url" : {
+          "type" : "string"
+        },
+        "hireable" : {
+          "type" : "string"
+        },
+        "starred_url" : {
+          "type" : "string"
+        },
+        "followers_url" : {
+          "type" : "string"
+        },
+        "public_gists" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "url" : {
+          "type" : "string"
+        },
+        "received_events_url" : {
+          "type" : "string"
+        },
+        "followers" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "avatar_url" : {
+          "type" : "string"
+        },
+        "events_url" : {
+          "type" : "string"
+        },
+        "html_url" : {
+          "type" : "string"
+        },
+        "following" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "location" : {
+          "type" : "string"
+        },
+        "node_id" : {
+          "type" : "string"
+        }
+      }
+    }
+  },
+  "swagger" : "2.0",
+  "info" : {
+    "x-WM-USE_PROXY_FOR_WEB" : true,
+    "x-WM-USE_PROXY_FOR_MOBILE" : true,
+    "x-WM-API_ID" : "b072b585-c054-42d3-bbc6-cb9ed020c0d6",
+    "x-WM-SERVICE_ID" : "github",
+    "version" : "2.0",
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-USE_WITH_CREDENTIALS" : false
+  },
+  "tags" : [ {
+    "name" : "github"
+  } ]
+}

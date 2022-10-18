@@ -1,0 +1,56 @@
+<wm-page pagetitle="Customers" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="10" name="page_content1">
+            <wm-breadcrumb dataset="Home, Customers" class="path-based" name="breadcrumb1" on-beforenavigate="Actions.goToPage_Main.invoke()"></wm-breadcrumb>
+            <wm-list listclass="list-group" template="true" template-name="I Card" itemsperrow="xs-1 sm-2 md-4 lg-6" class="list-card" statehandler="URL" name="EmployeeList1" dataset="bind:Variables.HrdbEmployeeData.dataSet" navigation="Basic"
+                on-click="Actions.goToPage_VacationDetails.invoke()">
+                <wm-listtemplate layout="media" name="listtemplate1">
+                    <wm-card name="Picture" picturesource="bind:Variables.HrdbEmployeeData.dataSet[$i].picurl" on-click="Actions.goToPage_VacationDetails.invoke()">
+                        <wm-card-content name="card_content1">
+                            <wm-label caption="bind:Variables.HrdbEmployeeData.dataSet[$i].firstname" name="Name" margin="0px unset unset unset" class="h4" whitespace="nowrap" on-click="Actions.goToPage_VacationDetails.invoke()"></wm-label>
+                            <wm-layoutgrid columns="2" name="layoutgrid1">
+                                <wm-gridrow name="gridrow1">
+                                    <wm-gridcolumn colwidth="6" columnwidth="2" horizontalalign="left" name="gridcolumn1">
+                                        <wm-icon iconclass="wi wi-contact-mail fa-2x" class="text-muted" name="icon1"></wm-icon>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn colwidth="6" padding="unset unset unset 1.25em" name="gridcolumn2">
+                                        <wm-label name="ID" caption="bind:Variables.HrdbEmployeeData.dataSet[$i].empId" fontunit="em" class="text-muted p" whitespace="nowrap"></wm-label>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow2">
+                                    <wm-gridcolumn colwidth="6" columnwidth="2" horizontalalign="left" name="gridcolumn3">
+                                        <wm-icon iconclass="wi wi-user fa-2x" class="text-muted" name="icon2"></wm-icon>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn colwidth="6" padding="unset unset unset 1.25em" name="gridcolumn4">
+                                        <wm-label name="JobTitle" caption="bind:Variables.HrdbEmployeeData.dataSet[$i].jobTitle" fontunit="em" class="text-muted p"></wm-label>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow3">
+                                    <wm-gridcolumn colwidth="6" columnwidth="2" horizontalalign="left" name="gridcolumn5">
+                                        <wm-icon iconclass="wi wi-dashboard fa-2x" class="text-muted" name="icon3"></wm-icon>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn colwidth="6" padding="unset unset unset 1.25em" name="gridcolumn6">
+                                        <wm-label name="Department" caption="bind:Variables.HrdbEmployeeData.dataSet[$i].department.name" fontunit="em" class="text-muted"></wm-label>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                            </wm-layoutgrid>
+                        </wm-card-content>
+                        <wm-card-footer horizontalalign="center" name="card_footer1">
+                            <wm-buttongroup class="btn-group-justified" horizontalalign="center" name="buttongroup1">
+                                <wm-anchor class="btn btn-transparent text-muted" caption="" iconclass="wi wi-mail fa-2x" name="anchor1"></wm-anchor>
+                                <wm-anchor class="btn btn-transparent" caption="" iconclass="wi wi-call fa-2x" name="anchor2"></wm-anchor>
+                                <wm-anchor class="btn btn-transparent" caption="" iconclass="wi wi-location-on fa-2x" name="anchor3"></wm-anchor>
+                            </wm-buttongroup>
+                        </wm-card-footer>
+                    </wm-card>
+                </wm-listtemplate>
+            </wm-list>
+            <wm-linearlayout direction="column" spacing="4" padding="4px" name="linearlayout1">
+                <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem1"></wm-linearlayoutitem>
+            </wm-linearlayout>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+</wm-page>

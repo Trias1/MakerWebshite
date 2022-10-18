@@ -1,0 +1,25 @@
+[ {
+  "name" : "googlemaps",
+  "version" : "7.0",
+  "platformVersion" : null,
+  "artifactType" : "PREFAB",
+  "artifactDependencyList" : null
+}, {
+  "name" : "GoogleOAuth",
+  "version" : "3.0",
+  "platformVersion" : null,
+  "artifactType" : "PREFAB",
+  "artifactDependencyList" : null
+}, {
+  "name" : "BoxOAuth",
+  "version" : "2.0",
+  "platformVersion" : null,
+  "artifactType" : "PREFAB",
+  "artifactDependencyList" : null
+}, {
+  "name" : "dark",
+  "version" : "4.0",
+  "platformVersion" : null,
+  "artifactType" : "THEME",
+  "artifactDependencyList" : null
+} ]

@@ -1,0 +1,6 @@
+{
+  "id" : "testing",
+  "type" : "DataService",
+  "packageNames" : [ "com.tugas_trias.testing" ],
+  "title" : "testing"
+}
